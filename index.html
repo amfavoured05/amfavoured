@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Logo Section with Glowing Effect -->
+<style>
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .glowing-logo {
+    animation: glowPulse 2s infinite alternate;
+    filter: drop-shadow(0 0 10px #7c3aed) drop-shadow(0 0 20px #9333ea);
+  }
+
+  .logo span {
+    animation: textGlow 2s infinite alternate;
+    color: #fff;
+  }
+
+  @keyframes glowPulse {
+    from {
+      transform: scale(1);
+      filter: drop-shadow(0 0 10px #7c3aed) drop-shadow(0 0 20px #9333ea);
+    }
+    to {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px #9333ea) drop-shadow(0 0 40px #a855f7);
+    }
+  }
+
+  @keyframes textGlow {
+    from {
+      text-shadow: 0 0 5px #7c3aed, 0 0 10px #9333ea, 0 0 15px #7c3aed;
+    }
+    to {
+      text-shadow: 0 0 10px #9333ea, 0 0 20px #a855f7, 0 0 30px #9333ea;
+    }
+  }
+</style>
+
+<a href="#home" class="logo">
+  <img src="assets/logo.png" alt="Amfavoured Logo" class="glowing-logo" />
+  <span>Amfavoured</span>
+</a>
   <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets9.lottiefiles.com;
