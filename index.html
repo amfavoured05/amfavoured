@@ -1,82 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- LOGO START -->
-<div class="logo">
-  <h1>CKO</h1>
-  <div class="underline"></div>
-  <div class="leaves">❦❦❦</div>
-  <p>AMFAVOURED</p>
-</div>
-
-<style>
-  .logo {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .logo h1 {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #00e6ff;
-    background: linear-gradient(90deg, #00e6ff, #ff00ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .underline {
-    width: 80px;
-    height: 6px;
-    background: #00e6ff;
-    border-radius: 5px;
-    margin: 0 auto 10px;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .logo p {
-    font-size: 1.2rem;
-    color: #00e6ff;
-    font-weight: bold;
-    letter-spacing: 2px;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  .leaves {
-    font-size: 1.5rem;
-    color: #00e6ff;
-    margin: 10px 0;
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #00e6ff, 0 0 20px #ff00ff, 0 0 30px #00e6ff;
-    }
-    to {
-      text-shadow: 0 0 20px #ff00ff, 0 0 40px #00e6ff, 0 0 60px #ff00ff;
-    }
-  }
-</style>
-<!-- LOGO END -->
-  <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets9.lottiefiles.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
-  font-src 'self' https://fonts.gstatic.com;
-  img-src 'self' data: https://*;
-  connect-src 'self' https://assets9.lottiefiles.com;
-  frame-src 'none';
-  object-src 'none';
-">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amfavoured • Creative Designer | Portfolio</title>
-  <meta name="description" content="Onwusoro Kingsley
-<br/>
-Creative Designer. Graphic design, video editing, and web design.
-Creating Excellence — Glowing Impact." />
-  <meta name="theme-color" content="#7c3aed" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amfavoured Studio - Creative Designer</title>
+  <meta name="description" content="Portfolio of Onwusoro Kingsley – Creative Designer, Graphic Designer, Video Editor, Web Designer. Creating Excellence — Glowing Impact." />
+
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets9.lottiefiles.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https://*;
+    connect-src 'self' https://assets9.lottiefiles.com;
+    frame-src 'none';
+    object-src 'none';
+  ">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Amfavoured • Creative Designer" />
@@ -120,6 +70,15 @@ Creating Excellence — Glowing Impact." />
                   linear-gradient(180deg, #0a0a0f, #0a0a0f 70%);
       filter: saturate(120%);
     }
+
+    /* Header */
+    header{position:sticky;top:0;backdrop-filter:blur(10px);background:linear-gradient(to bottom, rgba(10,10,15,.8), rgba(10,10,15,.2));border-bottom:1px solid rgba(255,255,255,.06);z-index:50;transition:all .3s ease}
+    header.shrink .nav{padding:8px 18px}
+    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:16px 18px;transition:all .3s ease}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;letter-spacing:.3px}
+    .brand .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 0deg,var(--brand),var(--brand-2),var(--brand-3),var(--brand));display:grid;place-items:center;animation:glowPulse 3s ease-in-out infinite}
+    .brand .logo span{font-size:18px}
+    @keyframes glowPulse{0%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}50%{box-shadow:0 0 22px rgba(124,58,237,.9),0 0 44px rgba(6,182,212,.7)}100%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}}
 
     nav a{color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:12px;transition:all .3s ease}
     nav a:hover{color:var(--text);background:var(--glass)}
@@ -225,10 +184,9 @@ Creating Excellence — Glowing Impact." />
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Onwusoro Kingsley",
+    "name": "Onwusoro Kingsley Chijioke",
     "alternateName": "Amfavoured",
     "jobTitle": "Creative Designer",
-<br/>
     "description": "I'm An Excellent Mind, Creating Impact and believing in the world of Possibilities.",
     "email": "mailto:amfavoured001@gmail.com",
     "telephone": "+2349125771590",
@@ -249,31 +207,29 @@ Creating Excellence — Glowing Impact." />
       <a class="brand" href="#home" aria-label="Amfavoured home">
         <div class="logo" aria-hidden="true"><span>⚡</span></div>
         <span>Amfavoured</span>
-<div class="cta">
-        <a class="btn primary" href="#contact">Let’s Connect</a>
-    <nav aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
- </nav>
-<div class="cta">
-<a class="btn primary" href="#contact">
-Let's Connect</a>
-<a class="btn">
+      </a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Let’s work together</a>
+        <a class="btn" href="resume.pdf" download>Download CV</a>
       </div>
     </div>
   </header>
 
-        <span class="badge">🎨 Creative Designer • 🎞 Video Editor • 🌐 Web Designer</span>
-<h1 class="headline"> <span class="grad">Amfavoured Studio</span></h1>
-<main id="home" class="wrap">
+  <main id="home" class="wrap">
     <!-- HERO -->
-    <section class="hero" aria-label="Intro">to 
-      <div><p class="sub">Excellent Minds-
-Creating impact and believing in a world of possibilities. We design colorful, value-driven visuals and build clean, accessible interfaces that convert.</p>
+    <section class="hero" aria-label="Intro">
+      <div>
+        <span class="badge">🎨 Creative Designer • 🎞 Video Editor • 🌐 Web Designer</span>
+        <h1 class="headline"><span class="grad"> Amfavoured</span>Studio</h1>
+        <p class="sub"> Excellent Minds — creating impact and believing in a world of possibilities. We design colorful, value-driven visuals and build clean, accessible interfaces that convert.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#services">Explore Services</a>
           <a class="btn" href="#projects">See Projects</a>
@@ -289,7 +245,7 @@ Creating impact and believing in a world of possibilities. We design colorful, v
         <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json" background="transparent" speed="1" style="width: 360px; height: 360px; margin:auto" loop autoplay></lottie-player>
       </div>
     </section>
-
+  
     <!-- ABOUT & SKILLS SUMMARY -->
     <section id="about" class="section" aria-label="About">
       <h2 class="title">About Me</h2>
@@ -343,7 +299,7 @@ Crafting innovative solutions for impactful results.
 
     <!-- SKILLS with AI illustrations -->
     <section id="skills" class="section" aria-label="Skills">
-      <h2 class="title">What I Do Best</h2>
+      <h2 class="title">What We Do Best</h2>
       <div class="grid">
         <article class="card reveal" style="grid-column:span 4; text-align:center">
           <div class="top">
@@ -371,7 +327,7 @@ Crafting innovative solutions for impactful results.
 
     <!-- SERVICES (standout, attractive) -->
     <section id="services" class="section" aria-label="Services">
-      <h2 class="title">Services That I Deliver</h2>
+      <h2 class="title">Services That We Deliver</h2>
       <div class="services">
         <article class="service reveal">
           <div class="top">
@@ -481,7 +437,7 @@ Crafting innovative solutions for impactful results.
       <h2 class="title">Frequently Asked</h2>
       <div class="grid">
         <article class="card reveal"><h3 class="h">Do you offer revisions?</h3><p>Yes — structured rounds to keep quality high and timelines clear.</p></article>
-        <article class="card reveal"><h3 class="h">Can you work remotely?</h3><p>Absolutely. I collaborate with clients in Nigeria and worldwide.</p></article>
+        <article class="card reveal"><h3 class="h">Can you work remotely?</h3><p>Absolutely. We collaborate with clients in Nigeria and worldwide.</p></article>
         <article class="card reveal"><h3 class="h">File formats?</h3><p>Editable source files plus web-ready exports (SVG/PNG/MP4, etc.).</p></article>
       </div>
     </section>
@@ -491,7 +447,7 @@ Crafting innovative solutions for impactful results.
       <h2 class="title">Let’s Create Something Excellent</h2>
       <div class="grid">
         <article class="card large reveal">
-          <h3 class="h">Send a Message</h3>
+          <h3 class="h">Send us a Message</h3>
           <!-- Netlify-compatible form; works on Netlify without backend. On Vercel, connect to Formspree/serverless. -->
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
