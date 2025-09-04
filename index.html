@@ -249,15 +249,355 @@ Creating Excellence — Glowing Impact." />
       <a class="brand" href="#home" aria-label="Amfavoured home">
         <div class="logo" aria-hidden="true"><span>⚡</span></div>
         <span>Amfavoured</span>
-      </a>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+    <!-- NAVIGATION MENU START -->
+<nav class="navbar">
+  <div class="nav-right">
+    <!-- Search box -->
+    <div class="search-container">
+      <input type="text" placeholder="Search..." class="search-box">
+      <button class="search-btn">🔍</button>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  </div>
+
+  <!-- Slide-in menu -->
+  <ul class="menu" id="menu">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+<!-- NAVIGATION MENU END -->
+
+
+<!-- PAGE SECTIONS -->
+<section id="home" class="content-section">
+  <h1>Welcome to My Website</h1>
+  <p>This is the home section.</p>
+</section>
+
+<section id="about" class="content-section">
+  <h1>About Me</h1>
+  <p>Some details about me.</p>
+</section>
+
+<section id="services" class="content-section">
+  <h1>Services</h1>
+  <p>These are the services I offer.</p>
+</section>
+
+<section id="skills" class="content-section">
+  <h1>Skills</h1>
+  <p>My professional skills go here.</p>
+</section>
+
+<section id="projects" class="content-section">
+  <h1>Projects</h1>
+  <p>Showcase of my past work.</p>
+</section>
+
+<section id="testimonials" class="content-section">
+  <h1>Testimonials</h1>
+  <p>What others say about me.</p>
+</section>
+
+<section id="contact" class="content-section">
+  <h1>Contact</h1>
+  <p>Get in touch with me.</p>
+</section>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn">⬆</button>
+
+
+<style>
+  /* Navbar container */
+  .navbar {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+    font-family: Arial, sans-serif;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Search styling */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background: #111;
+    border-radius: 8px;
+    padding: 3px 5px;
+    box-shadow: 0 0 10px #00e6ff;
+  }
+
+  .search-box {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #000;
+    color: #00e6ff;
+  }
+
+  .search-btn {
+    padding: 6px 10px;
+    border: none;
+    background: #00e6ff;
+    color: #111;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .search-btn:hover {
+    background: #ff00ff;
+    color: #fff;
+  }
+
+  /* Hamburger icon */
+  .menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #00e6ff;
+    background: #111;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00e6ff;
+  }
+
+  .menu-toggle:hover {
+    background: #222;
+  }
+
+  /* Slide-in menu */
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 60px 20px 20px 20px;
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden by default */
+    height: 100%;
+    width: 250px;
+    background: #111;
+    box-shadow: -2px 0 15px #00e6ff;
+    border-left: 2px solid #00e6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.4s ease;
+    z-index: 1002;
+  }
+
+  .menu.active {
+    right: 0; /* slide in */
+  }
+
+  .menu li {
+    margin: 20px 0;
+    width: 100%;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: #00e6ff;
+    font-size: 1.4rem;
+    transition: 0.3s;
+  }
+
+  .menu li a:hover {
+    color: #ff00ff;
+  }
+
+  /* Active menu link */
+  .menu li a.active {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00e6ff;
+    font-weight: bold;
+  }
+
+  /* Close button inside menu */
+  .close-btn {
+    font-size: 2rem;
+    color: #ff00ff;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    transition: 0.3s;
+  }
+
+  .close-btn:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff00ff;
+  }
+
+  /* Overlay (background dim) */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 1000;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  /* Page sections */
+  .content-section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    background: #111;
+    color: #fff;
+    border: 3px solid transparent;
+    margin: 40px auto;
+    width: 80%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    border-radius: 12px;
+  }
+
+  .content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    border-color: #00e6ff;
+    box-shadow: 0 0 20px #00e6ff, 0 0 40px #ff00ff;
+  }
+
+  .content-section h1 {
+    color: #00e6ff;
+    margin-bottom: 15px;
+  }
+
+  html {
+    scroll-behavior: smooth; /* smooth scroll for menu links */
+  }
+
+  /* Scroll to Top button */
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #111;
+    color: #00e6ff;
+    font-size: 1.8rem;
+    padding: 12px 18px;
+    border: 2px solid #00e6ff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1003;
+    box-shadow: 0 0 15px #00e6ff, 0 0 25px #ff00ff;
+    transition: transform 0.3s;
+  }
+
+  #scrollTopBtn:hover {
+    transform: scale(1.2);
+    background: #00e6ff;
+    color: #111;
+    box-shadow: 0 0 25px #ff00ff, 0 0 40px #00e6ff;
+  }
+</style>
+
+
+<script>
+  // Navbar functionality
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  const closeBtn = document.getElementById('close-btn');
+  const overlay = document.getElementById('overlay');
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+
+  // Section animations + glowing effect
+  const sections = document.querySelectorAll('.content-section');
+  const menuLinks = document.querySelectorAll('.menu li a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // Highlight active menu link
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        menuLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.menu li a[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+
+  // Scroll to Top button functionality
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  });
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
       <div class="cta">
         <a class="btn primary" href="#contact">Let’s Connect</a>
       </div>
@@ -266,14 +606,12 @@ Creating Excellence — Glowing Impact." />
 
 
         <h1 class="headline"> <span class="grad">Amfavoured Studio</span></h1>
- 
 <main id="home" class="wrap">
     <!-- HERO -->
     <section class="hero" aria-label="Intro">
       <div>
         <span class="badge">🎨 Creative Designer • 🎞 Video Editor • 🌐 Web Designer</span>
-
-        <p class="sub">Excellent Minds
+        <p class="sub">Excellent Minds-
 Creating impact and believing in a world of possibilities. We design colorful, value-driven visuals and build clean, accessible interfaces that convert.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#services">Explore Services</a>
@@ -298,7 +636,7 @@ Creating impact and believing in a world of possibilities. We design colorful, v
         <article class="card large reveal">
           <h3 class="h">Who I Am</h3>
           <p>I’m <strong>Amfavoured</strong> —
-creative focused on <em>graphic design</em>, <em>video editing</em>, and <em>web design</em>. We blend bold aesthetics with clear business outcomes, keeping performance and accessibility in mind. We transform ideas into stunning visuals and seamless experiences.
+Creativity focused on <em>graphic design</em>, <em>video editing</em>, and <em>web design</em>. We blend bold aesthetics with clear business outcomes, keeping performance and accessibility in mind. We transform ideas into stunning visuals and seamless experiences.
 Crafting innovative solutions for impactful results.
 <strong>“Creating Excellence — Glowing Impact.”</strong></p>
           <div class="stack" aria-label="Principles">
@@ -372,7 +710,7 @@ Crafting innovative solutions for impactful results.
 
     <!-- SERVICES (standout, attractive) -->
     <section id="services" class="section" aria-label="Services">
-      <h2 class="title">Services That Deliver</h2>
+      <h2 class="title">Services That I Deliver</h2>
       <div class="services">
         <article class="service reveal">
           <div class="top">
