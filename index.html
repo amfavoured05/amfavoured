@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Logo Section with Glowing Effect -->
+ <!-- LOGO START -->
+<div class="logo">
+  <h1>CKO</h1>
+  <div class="underline"></div>
+  <div class="leaves">❦❦❦</div>
+  <p>AMFAVOURED</p>
+</div>
+
 <style>
-  /* Logo Styling */
   .logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .logo h1 {
+    font-size: 5rem;
     font-weight: bold;
-    color: #fff;
-    text-decoration: none;
+    color: #00e6ff;
+    background: linear-gradient(90deg, #00e6ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  .logo img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
+  .underline {
+    width: 80px;
+    height: 6px;
+    background: #00e6ff;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  .glowing-logo {
-    animation: glowPulse 2s infinite alternate;
-    filter: drop-shadow(0 0 10px #7c3aed) drop-shadow(0 0 20px #9333ea);
+  .logo p {
+    font-size: 1.2rem;
+    color: #00e6ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  .logo span {
-    animation: textGlow 2s infinite alternate;
-    color: #fff;
+  .leaves {
+    font-size: 1.5rem;
+    color: #00e6ff;
+    margin: 10px 0;
+    animation: glow 2s ease-in-out infinite alternate;
   }
 
-  @keyframes glowPulse {
+  @keyframes glow {
     from {
-      transform: scale(1);
-      filter: drop-shadow(0 0 10px #7c3aed) drop-shadow(0 0 20px #9333ea);
+      text-shadow: 0 0 10px #00e6ff, 0 0 20px #ff00ff, 0 0 30px #00e6ff;
     }
     to {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 20px #9333ea) drop-shadow(0 0 40px #a855f7);
-    }
-  }
-
-  @keyframes textGlow {
-    from {
-      text-shadow: 0 0 5px #7c3aed, 0 0 10px #9333ea, 0 0 15px #7c3aed;
-    }
-    to {
-      text-shadow: 0 0 10px #9333ea, 0 0 20px #a855f7, 0 0 30px #9333ea;
+      text-shadow: 0 0 20px #ff00ff, 0 0 40px #00e6ff, 0 0 60px #ff00ff;
     }
   }
 </style>
-
-<a href="#home" class="logo">
-  <img src="assets/logo.png" alt="Amfavoured Logo" class="glowing-logo" />
-  <span>Amfavoured</span>
-</a>
+<!-- LOGO END -->
   <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets9.lottiefiles.com;
