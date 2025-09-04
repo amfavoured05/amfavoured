@@ -121,15 +121,6 @@ Creating Excellence — Glowing Impact." />
       filter: saturate(120%);
     }
 
-    /* Header */
-    header{position:sticky;top:0;backdrop-filter:blur(10px);background:linear-gradient(to bottom, rgba(10,10,15,.8), rgba(10,10,15,.2));border-bottom:1px solid rgba(255,255,255,.06);z-index:50;transition:all .3s ease}
-    header.shrink .nav{padding:8px 18px}
-    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:16px 18px;transition:all .3s ease}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;letter-spacing:.3px}
-    .brand .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 0deg,var(--brand),var(--brand-2),var(--brand-3),var(--brand));display:grid;place-items:center;animation:glowPulse 3s ease-in-out infinite}
-    .brand .logo span{font-size:18px}
-    @keyframes glowPulse{0%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}50%{box-shadow:0 0 22px rgba(124,58,237,.9),0 0 44px rgba(6,182,212,.7)}100%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}}
-
     nav a{color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:12px;transition:all .3s ease}
     nav a:hover{color:var(--text);background:var(--glass)}
     nav a.active{color:var(--text);background:rgba(124,58,237,.25);box-shadow:0 0 12px rgba(124,58,237,0.6);font-weight:600}
@@ -273,12 +264,15 @@ Creating Excellence — Glowing Impact." />
     </div>
   </header>
 
-  <main id="home" class="wrap">
+
+        <h1 class="headline"> <span class="grad">Amfavoured Studio</span></h1>
+ 
+<main id="home" class="wrap">
     <!-- HERO -->
     <section class="hero" aria-label="Intro">
       <div>
         <span class="badge">🎨 Creative Designer • 🎞 Video Editor • 🌐 Web Designer</span>
-        <h1 class="headline"> <span class="grad">Amfavoured Studio</span></h1>
+
         <p class="sub">Excellent Minds
 Creating impact and believing in a world of possibilities. We design colorful, value-driven visuals and build clean, accessible interfaces that convert.</p>
         <div class="hero-cta">
@@ -303,9 +297,12 @@ Creating impact and believing in a world of possibilities. We design colorful, v
       <div class="grid">
         <article class="card large reveal">
           <h3 class="h">Who I Am</h3>
-          <p>I’m <strong>Amfavoured</strong> — a multidisciplinary creative focused on <em>graphic design</em>, <em>video editing</em>, and <em>web design</em>. I blend bold aesthetics with clear business outcomes, keeping performance and accessibility in mind. My mantra is <strong>“Creating Excellence — Glowing Impact.”</strong></p>
+          <p>I’m <strong>Amfavoured</strong> —
+creative focused on <em>graphic design</em>, <em>video editing</em>, and <em>web design</em>. We blend bold aesthetics with clear business outcomes, keeping performance and accessibility in mind. We transform ideas into stunning visuals and seamless experiences.
+Crafting innovative solutions for impactful results.
+<strong>“Creating Excellence — Glowing Impact.”</strong></p>
           <div class="stack" aria-label="Principles">
-            <span class="tag">User-first</span>
+            <span class="tag">User's Priority</span>
             <span class="tag">Consistent delivery</span>
             <span class="tag">Design systems</span>
             <span class="tag">Performance & accessibility</span>
