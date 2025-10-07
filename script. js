@@ -1,0 +1,69 @@
+// script.js — header shrink, reveal on scroll, scroll-spy, smooth links
+(function () {
+  'use strict';
+
+  // DOM refs
+  const header = document.getElementById('header');
+  const navLinks = Array.from(document.querySelectorAll('.main-nav .nav-link'));
+  const revealEls = Array.from(document.querySelectorAll('.reveal'));
+  const SCROLL_SHRINK = 64;
+
+  // show year
+  document.addEventListener('DOMContentLoaded', () => {
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  });
+
+  // shrink header
+  function onScroll() {
+    if (window.scrollY > SCROLL_SHRINK) header.classList.add('shrink');
+    else header.classList.remove('shrink');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // reveal on scroll
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // scroll-spy
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  if (sections.length && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { rootMargin: '-35% 0px -50% 0px', threshold: 0.2 });
+
+    sections.forEach(s => spy.observe(s));
+  }
+
+  // smooth anchor scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (ev) => {
+      const href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (target) {
+          ev.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+})();
