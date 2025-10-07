@@ -1,529 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amfavoured Studio - Creative Designer</title>
-  <meta name="description" content="Portfolio of Onwusoro Kingsley – Creative Designer, Graphic Designer, Video Editor, Web Designer. Creating Excellence — Glowing Impact." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amfavoured — Onwusoro Kingsley Chijioke • Creative Designer</title>
+  <meta name="description" content="Onwusoro Kingsley Chijioke (Amfavoured) — Creative Designer. Graphic design, video editing, web design. Creating Excellence — Glowing Impact." />
 
-  <!-- Security: Content Security Policy -->
+  <!-- Minimal CSP (update if you add CDNs) -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net https://assets9.lottiefiles.com;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
-    font-src 'self' https://fonts.gstatic.com;
-    img-src 'self' data: https://*;
-    connect-src 'self' https://assets9.lottiefiles.com;
+    script-src 'self' https://unpkg.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self';
     frame-src 'none';
     object-src 'none';
   ">
 
-  <!-- Favicon -->
-  <link rel="icon" href="assets/logo.png" type="image.png"
-<!-- Logo -->
->
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-</head>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Amfavoured • Creative Designer" />
-  <meta property="og:description" content="Colorful, value-driven design — graphics, video, and web experiences." />
-  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%237c3aed'/%3E%3Cstop offset='.5' stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='630' fill='%230a0a0f'/%3E%3Ccircle cx='250' cy='180' r='220' fill='url(%23g)' opacity='.4'/%3E%3Ccircle cx='950' cy='450' r='260' fill='url(%23g)' opacity='.35'/%3E%3Ctext x='50' y='560' font-size='72' font-family='sans-serif' fill='%23eef2ff' opacity='.9'%3EAmfavoured • Creative Designer%3C/text%3E%3C/svg%3E" />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon (emoji) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚡</text></svg>">
-;">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;800&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Lottie (for subtle AI/creative animations) -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-  <style>
-    :root{
-      --bg: #0a0a0f;
-      --text: #eef2ff;
-      --muted: #c7c9d1;
-      --brand: #7c3aed; /* purple */
-      --brand-2: #06b6d4; /* cyan */
-      --brand-3: #f59e0b; /* amber */
-      --card: rgba(255,255,255,0.06);
-      --glass: rgba(255,255,255,0.08);
-      --ring: rgba(124,58,237,0.45);
-      --shadow: 0 10px 30px rgba(0,0,0,.45);
-    }
-
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Onest, Poppins, system-ui, -apple-system, Segoe UI, Roboto;scroll-behavior:smooth}
-
-    /* Animated gradient backdrop, AI-style glow orbs */
-    .backdrop{position:fixed; inset:0; z-index:-1; overflow:hidden;
-      background: radial-gradient(40vmax 40vmax at 10% 10%, rgba(124,58,237,.25), transparent 60%),
-                  radial-gradient(35vmax 35vmax at 90% 20%, rgba(6,182,212,.25), transparent 60%),
-                  radial-gradient(45vmax 45vmax at 50% 90%, rgba(245,158,11,.25), transparent 60%),
-                  linear-gradient(180deg, #0a0a0f, #0a0a0f 70%);
-      filter: saturate(120%);
-    }
-
-    /* Header */
-    header{position:sticky;top:0;backdrop-filter:blur(10px);background:linear-gradient(to bottom, rgba(10,10,15,.8), rgba(10,10,15,.2));border-bottom:1px solid rgba(255,255,255,.06);z-index:50;transition:all .3s ease}
-    header.shrink .nav{padding:8px 18px}
-    .nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:16px 18px;transition:all .3s ease}
-    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:800;letter-spacing:.3px}
-    .brand .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 0deg,var(--brand),var(--brand-2),var(--brand-3),var(--brand));display:grid;place-items:center;animation:glowPulse 3s ease-in-out infinite}
-    .brand .logo span{font-size:18px}
-    @keyframes glowPulse{0%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}50%{box-shadow:0 0 22px rgba(124,58,237,.9),0 0 44px rgba(6,182,212,.7)}100%{box-shadow:0 0 10px rgba(124,58,237,.5),0 0 20px rgba(6,182,212,.4)}}
-
-    nav a{color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:12px;transition:all .3s ease}
-    nav a:hover{color:var(--text);background:var(--glass)}
-    nav a.active{color:var(--text);background:rgba(124,58,237,.25);box-shadow:0 0 12px rgba(124,58,237,0.6);font-weight:600}
-
-    .cta{margin-left:auto;display:flex;gap:10px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));color:var(--text);text-decoration:none;box-shadow:var(--shadow);transition:all .3s ease}
-    .btn.primary{border-color:transparent;background:linear-gradient(135deg, var(--brand), var(--brand-2));box-shadow:0 10px 30px rgba(124,58,237,.35)}
-    header.shrink .btn.primary{box-shadow:0 0 18px rgba(124,58,237,.45)}
-    .btn:hover{box-shadow:0 0 15px rgba(124,58,237,.6)}
-
-    .wrap{max-width:1200px;margin:0 auto;padding:56px 18px}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding-top:32px}
-    .badge{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.35);color:#e9ddff;font-weight:600}
-    .headline{font-size:clamp(36px,5vw,60px);line-height:1.05;margin:14px 0 10px;font-weight:800}
-    .headline .grad{background:linear-gradient(90deg, var(--brand), var(--brand-2) 50%, var(--brand-3));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .sub{color:var(--muted);font-size:18px;max-width:65ch}
-    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-    .kpins{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .kpin{padding:10px 12px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,.08)}
-
-    /* Section titles */
-    .section{margin-top:80px}
-    .title{font-size:clamp(22px, 3.3vw, 34px);margin:0 0 16px;font-weight:800}
-
-    /* Cards & grids */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .card{grid-column:span 4;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:18px;box-shadow:var(--shadow)}
-    .card.large{grid-column:span 8}
-    .card .h{font-weight:700;margin:2px 0 8px;font-size:18px}
-    .card p{color:var(--muted);margin:0}
-    .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
-    .tag{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.07)}
-
-    /* Bars */
-    .bar{height:10px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
-    .bar > span{display:block;height:100%;background:linear-gradient(90deg, var(--brand), var(--brand-2));}
-
-    /* Service feature blocks */
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .service{position:relative;border-radius:22px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));padding:20px;box-shadow:var(--shadow);text-align:center}
-    .service .top{display:flex;justify-content:center;margin-bottom:8px}
-    .service h3{margin:6px 0 8px}
-    .service ul{list-style:none;padding:0;margin:0;color:var(--muted)}
-    .service ul li{padding:4px 0}
-    .service .cta{justify-content:center;margin-top:12px}
-
-    /* Projects (pure CSS AI-gradient thumbnails) */
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .project{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:#0f0f16}
-    .thumb{height:220px;display:block;background:conic-gradient(from 0deg, rgba(124,58,237,.35), rgba(6,182,212,.35), rgba(245,158,11,.35), rgba(124,58,237,.35));filter:saturate(120%)}
-    .project .meta{padding:12px 14px}
-    .project .meta h4{margin:0 0 6px}
-
-    /* Testimonials */
-    .testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .quote{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px}
-    .quote p{margin:0 0 10px;color:var(--muted)}
-
-    /* Process */
-    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .step{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px;text-align:center}
-
-    /* Contact */
-    form{display:grid;gap:12px}
-    input, textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--text);padding:12px 14px;border-radius:14px}
-    textarea{min-height:120px}
-
-    /* Footer */
-    footer{border-top:1px solid rgba(255,255,255,.08);margin-top:56px}
-    .foot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 18px;color:var(--muted)}
-    .socials{display:flex;gap:12px}
-    .socials a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
-    .socials a:hover{color:var(--text);background:var(--glass)}
-
-    /* Reveal on scroll */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-
-    /* Responsive */
-    @media (max-width: 1100px){
-      .hero{grid-template-columns:1fr}
-      .card,.card.large{grid-column:span 12}
-      .services{grid-template-columns:1fr 1fr}
-      .projects{grid-template-columns:1fr 1fr}
-      .testis{grid-template-columns:1fr 1fr}
-      .process{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      nav{display:none}
-      .projects,.testis,.services,.process{grid-template-columns:1fr}
-    }
-
-    /* Accessibility: reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none !important; transition:none !important}
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Onwusoro Kingsley Chijioke",
-    "alternateName": "Amfavoured",
-    "jobTitle": "Creative Designer",
-    "description": "I'm An Excellent Mind, Creating Impact and believing in the world of Possibilities.",
-    "email": "mailto:amfavoured001@gmail.com",
-    "telephone": "+2349125771590",
-    "address": {"@type":"PostalAddress","addressCountry":"Nigeria"},
-    "sameAs": [
-      "https://x.com/KingsleChijioke?t=YqbLBjO0uQZ_jMKTIkhrFg&s=09",
-      "https://www.reddit.com/u/amfavoured05/s/HZ95Vx6nHC"
-    ]
-  }
-  </script>
+  <!-- Defer main script -->
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="backdrop" aria-hidden="true"></div>
+  <!-- background orbs -->
+  <div class="bg-orbs" aria-hidden="true"></div>
 
   <!-- Header -->
-  <header id="header">
-    <div class="nav">
+  <header id="header" class="site-header">
+    <div class="container header-row">
       <a class="brand" href="#home" aria-label="Amfavoured home">
-        <div class="logo" aria-hidden="true"><span>⚡</span></div>
-        <span>Amfavoured</span>
+        <img src="assets/logo.png" alt="Amfavoured logo" class="brand-logo" />
+        <span class="brand-text">Amfavoured</span>
       </a>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
-      <div class="cta">
-        <a class="btn primary" href="#contact">Let’s Connect</a>
-        <a class="btn" href="resume.pdf" download>Download CV
+
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="#contact">Work with me</a>
       </div>
     </div>
   </header>
 
-  <main id="home" class="wrap">
-    <!-- HERO -->
-    <section class="hero" aria-label="Intro">
-      <div>
-        <span class="badge">🎨 Creative Designer • 🎞 Video Editor • 🌐 Web Designer</span>
-        <h1 class="headline"><span class="grad"> Amfavoured</span>Studio</h1>
-        <p class="sub"> Excellent Minds — creating impact and believing in a world of possibilities. We design colorful, value-driven visuals and build clean, accessible interfaces that convert.</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#services">Explore Services</a>
-          <a class="btn" href="#projects">See Projects</a>
+  <!-- Main -->
+  <main id="home" class="site-main">
+
+    <!-- HERO (Cryfi-style large headline + right visual) -->
+    <section id="home-hero" class="hero" role="region" aria-label="Intro">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Signal your creativity — <span>Design that converts</span></h1>
+          <p class="hero-sub">I’m <strong>Onwusoro Kingsley Chijioke</strong> (Amfavoured). Creative designer focused on graphic design, video editing, and web design — building visuals & experiences that create impact.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#services">Explore Services</a>
+            <a class="btn btn-outline" href="#projects">See projects</a>
+          </div>
+
+          <ul class="hero-benefits">
+            <li>Graphic design • Video editing • Web design</li>
+            <li>Fast turnaround • Remote-friendly (Nigeria)</li>
+            <li>Creating Excellence — Glowing Impact</li>
+          </ul>
         </div>
-        <div class="kpins" aria-label="Key highlights">
-          <div class="kpin">Brand • UI • Motion</div>
-          <div class="kpin">Reliable & Fast</div>
-          <div class="kpin">Nigeria • Remote-friendly</div>
+
+        <div class="hero-right" aria-hidden="true">
+          <!-- stylized interface mockup (SVG, lightweight) -->
+          <svg class="hero-mock" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect x="8" y="8" rx="20" width="624" height="464" fill="#071020" stroke="rgba(255,255,255,0.03)"/>
+            <rect x="36" y="36" rx="10" width="320" height="160" fill="url(#lg)" opacity="0.08" />
+            <rect x="36" y="210" rx="8" width="560" height="18" fill="#0b1220"/>
+            <g transform="translate(36,36)" filter="url(#glow)">
+              <circle cx="480" cy="100" r="56" fill="#061834" />
+              <path d="M430 60 C460 20,520 20,548 58" stroke="#06b6d4" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+          </svg>
         </div>
-      </div>
-      <!-- AI/Creative Lottie -->
-      <div aria-hidden="true">
-        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_tfb3estd.json" background="transparent" speed="1" style="width: 360px; height: 360px; margin:auto" loop autoplay></lottie-player>
       </div>
     </section>
-  
-    <!-- ABOUT & SKILLS SUMMARY -->
+
+    <!-- ABOUT -->
     <section id="about" class="section" aria-label="About">
-      <h2 class="title">About Me</h2>
-      <div class="grid">
-        <article class="card large reveal">
-          <h3 class="h">Who I Am</h3>
-          <p>I’m <strong>Amfavoured</strong> —
-Creativity focused on <em>graphic design</em>, <em>video editing</em>, and <em>web design</em>. We blend bold aesthetics with clear business outcomes, keeping performance and accessibility in mind. We transform ideas into stunning visuals and seamless experiences.
-Crafting innovative solutions for impactful results.
-<strong>“Creating Excellence — Glowing Impact.”</strong></p>
-          <div class="stack" aria-label="Principles">
-            <span class="tag">User's Priority</span>
-            <span class="tag">Consistent delivery</span>
-            <span class="tag">Design systems</span>
-            <span class="tag">Performance & accessibility</span>
-          </div>
-        </article>
-        <article class="card reveal">
-          <h3 class="h">Core Skills</h3>
-          <div class="stack">
-            <span class="tag">Graphic Design</span>
-            <span class="tag">Video Editing</span>
-            <span class="tag">Web Design</span>
-            <span class="tag">UI/UX</span>
-            <span class="tag">Figma</span>
-            <span class="tag">HTML/CSS/JS</span>
-          </div>
-          <div style="margin-top:12px">
-            <div class="bar" aria-label="Graphic Design"><span style="width:92%"></span></div>
-            <div class="bar" aria-label="Video Editing" style="margin-top:8px"><span style="width:85%"></span></div>
-            <div class="bar" aria-label="Web Design" style="margin-top:8px"><span style="width:88%"></span></div>
-          </div>
-        </article>
-        <article class="card reveal">
-          <h3 class="h">Tools</h3>
-          <div class="stack">
-            <span class="tag">Adobe Suite</span>
-            <span class="tag">CapCut/Premiere</span>
-            <span class="tag">Figma</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">GitHub</span>
-          </div>
-          <div class="stack" style="margin-top:12px">
-            <span class="tag">Brand & Styleguides</span>
-            <span class="tag">Landing Pages</span>
-            <span class="tag">Social Graphics</span>
-          </div>
-        </article>
+      <div class="container split">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>I’m <strong>Amfavoured</strong> — a creative designer who values clarity, impact and performance. I create brand visuals, edit engaging videos, and design websites that convert users into customers.</p>
+          <p class="muted">Principles: User-first design • Reliability • Measurable outcomes</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat"><strong>5+</strong><span>Years experience</span></div>
+          <div class="stat"><strong>Graphic</strong><span>Design • Branding</span></div>
+          <div class="stat"><strong>Video</strong><span>Editing • Motion</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- SKILLS with AI illustrations -->
-    <section id="skills" class="section" aria-label="Skills">
-      <h2 class="title">What We Do Best</h2>
-      <div class="grid">
-        <article class="card reveal" style="grid-column:span 4; text-align:center">
-          <div class="top">
-            <img src="https://undraw.co/api/illustrations/6cbdd5b4-4e92-408b-b9c6-8cf2583c97c1" alt="AI-styled illustration for Web Design" style="max-width:180px; height:auto;" loading="lazy" decoding="async">
-          </div>
-          <h3 class="h">Graphic Design</h3>
-          <p>Logos, brand kits, social graphics, and striking visuals that glow with your message.</p>
-        </article>
-        <article class="card reveal" style="grid-column:span 4; text-align:center">
-          <div class="top">
-            <img src="https://undraw.co/api/illustrations/9f2c8b0d-6bfb-48d4-b391-cced7f8ce5fb" alt="AI-styled illustration for Video Editing" style="max-width:180px; height:auto;" loading="lazy" decoding="async">
-          </div>
-          <h3 class="h">Video Editing</h3>
-          <p>Clean cuts, motion, and story — ready for social, ads, or web embeds.</p>
-        </article>
-        <article class="card reveal" style="grid-column:span 4; text-align:center">
-          <div class="top">
-            <img src="https://undraw.co/api/illustrations/ffb75c20-7720-4bb2-ae41-6cfd2d01b8f8" alt="AI-styled illustration for Graphic Design" style="max-width:180px; height:auto;" loading="lazy" decoding="async">
-          </div>
-          <h3 class="h">Web Design</h3>
-          <p>Responsive, accessible websites that look vibrant and perform fast.</p>
-        </article>
+    <!-- SKILLS -->
+    <section id="skills" class="section alt" aria-label="Skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="cards grid-3">
+          <article class="card reveal">
+            <div class="card-visual icon-graphic" aria-hidden="true"></div>
+            <h3>Graphic Design</h3>
+            <p>Logos, brand kits, social visuals — vibrant & clear.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-visual icon-video" aria-hidden="true"></div>
+            <h3>Video Editing</h3>
+            <p>Social videos, promos, color grade, and motion polish.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-visual icon-web" aria-hidden="true"></div>
+            <h3>Web Design</h3>
+            <p>Responsive landing pages and portfolio sites with conversion focus.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES (standout, attractive) -->
+    <!-- SERVICES -->
     <section id="services" class="section" aria-label="Services">
-      <h2 class="title">Services That We Deliver</h2>
-      <div class="services">
-        <article class="service reveal">
-          <div class="top">
-            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_pprxh53t.json" background="transparent" speed="1" style="width:180px;height:180px" loop autoplay></lottie-player>
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h4>Website Graphics</h4>
+            <p>Hero imagery, illustrations, and on-brand components for your site.</p>
+            <a class="link-cta" href="#contact">Get a quote →</a>
           </div>
-          <h3>Website Graphics</h3>
-          <p class="sub">Custom visuals that match your brand and boost clarity.</p>
-          <ul>
-            <li>Hero/landing visuals</li>
-            <li>Icon sets & illustrations</li>
-            <li>Styleguides & components</li>
-          </ul>
-          <div class="cta"><a class="btn primary" href="#contact">Request a quote</a></div>
-        </article>
-        <article class="service reveal">
-          <div class="top">
-            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width:180px;height:180px" loop autoplay></lottie-player>
+
+          <div class="service-card">
+            <h4>Video & Photo Editing</h4>
+            <p>Shorts, promos, and polished photo edits tailored to your audience.</p>
+            <a class="link-cta" href="#contact">Start edit →</a>
           </div>
-          <h3>Video & Photo Editing</h3>
-          <p class="sub">Polished stories and crisp imagery for maximum impact.</p>
-          <ul>
-            <li>YouTube/social edits</li>
-            <li>Ads & promos</li>
-            <li>Color & sound cleanup</li>
-          </ul>
-          <div class="cta"><a class="btn primary" href="#contact">Start your edit</a></div>
-        </article>
-        <article class="service reveal">
-          <div class="top">
-            <lottie-player 
-<!-- Lottie Script --> src="https://assets10.lottiefiles.com/private_files/lf30_q5pk6p1k.json" 
-  background="transparent" 
-  speed="1" 
-  style="width:180px; height:180px;" 
-  loop 
-  autoplay>
-</lottie-player>
+
+          <div class="service-card">
+            <h4>Web Design</h4>
+            <p>Landing pages, portfolio sites, and performance-minded builds.</p>
+            <a class="link-cta" href="#contact">Design my site →</a>
           </div>
-          <h3>Web Design</h3>
-          <p class="sub">Modern, responsive pages with conversion-focused UX.</p>
-          <ul>
-            <li>Landing pages & portfolios</li>
-            <li>Responsive layouts</li>
-            <li>SEO & performance basics</li>
-          </ul>
-          <div class="cta"><a class="btn primary" href="#contact">Design my site</a></div>
-        </article>
+        </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section" aria-label="Process">
-      <h2 class="title">How We’ll Work</h2>
-      <div class="process">
-        <div class="step reveal"><strong>1. Discover</strong><p class="sub">Goals, audience, and success metrics.</p></div>
-        <div class="step reveal"><strong>2. Design</strong><p class="sub">Concepts, iterations, and style.</p></div>
-        <div class="step reveal"><strong>3. Build</strong><p class="sub">Assets, layouts, and motion.</p></div>
-        <div class="step reveal"><strong>4. Deliver</strong><p class="sub">Polish, launch, and support.</p></div>
-      </div>
-    </section>
-
-    <!-- PROJECTS (placeholders you can replace later) -->
-    <section id="projects" class="section" aria-label="Projects">
-      <h2 class="title">Selected Projects</h2>
-      <div class="projects">
-        <article class="project reveal">
-          <div class="thumb" aria-hidden="true"></div>
-          <div class="meta">
+    <!-- PROJECTS (placeholder grid like Cryfi's showcases) -->
+    <section id="projects" class="section alt" aria-label="Projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="thumb"></div>
             <h4>Vibrant SaaS Landing</h4>
-            <p class="sub">High-converting landing page with bold gradients and motion.</p>
-            <a class="btn" href="#contact" aria-label="Request this style">Request this style</a>
-    </div>
-        </article>
-        <article class="project reveal">
-          <div class="thumb" aria-hidden="true"></div>
-          <div class="meta">
-            <h4>Brand System Kit</h4>
-            <p class="sub">A modular design system for consistent brand experiences.</p>
-            <a class="btn" href="#contact" aria-label="Request this style">Request this style</a>
+            <p class="muted">Bold hero & motion for conversion-focused page.</p>
           </div>
-        </article>
-        <article class="project reveal">
-          <div class="thumb" aria-hidden="true"></div>
-          <div class="meta">
-            <h4>Education Hub</h4>
-            <p class="sub">A colorful, accessible portal for learning resources.</p>
-            <a class="btn" href="#contact" aria-label="Request this style">Request this style</a>
+          <div class="project-card reveal">
+            <div class="thumb"></div>
+            <h4>Brand System</h4>
+            <p class="muted">Modular brand assets & guidelines.</p>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS / VALUE -->
-    <section id="testimonials" class="section" aria-label="Testimonials">
-      <h2 class="title">What People Say</h2>
-      <div class="testis">
-        <figure class="quote reveal">
-          <p>“Amfavoured delivered beyond expectations — colorful design, clean structure, and measurable results.”</p>
-          <figcaption>— Startup Founder</figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <p>“A great mix of creativity and reliability. Communication was clear and timelines were met.”</p>
-          <figcaption>— Project Manager</figcaption>
-        </figure>
-        <figure class="quote reveal">
-          <p>“Our new visuals look fantastic everywhere and helped us ship quicker.”</p>
-          <figcaption>— Nonprofit Director</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- FAQ to add depth and reduce crowding -->
-    <section class="section" aria-label="FAQ">
-      <h2 class="title">Frequently Asked</h2>
-      <div class="grid">
-        <article class="card reveal"><h3 class="h">Do you offer revisions?</h3><p>Yes — structured rounds to keep quality high and timelines clear.</p></article>
-        <article class="card reveal"><h3 class="h">Can you work remotely?</h3><p>Absolutely. We collaborate with clients in Nigeria and worldwide.</p></article>
-        <article class="card reveal"><h3 class="h">File formats?</h3><p>Editable source files plus web-ready exports (SVG/PNG/MP4, etc.).</p></article>
+          <div class="project-card reveal">
+            <div class="thumb"></div>
+            <h4>Education Portal</h4>
+            <p class="muted">Accessible design for learning platforms.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section" aria-label="Contact">
-      <h2 class="title">Let’s Create Something Excellent</h2>
-      <div class="grid">
-        <article class="card large reveal">
-          <h3 class="h">Send us a Message</h3>
-          <!-- Netlify-compatible form; works on Netlify without backend. On Vercel, connect to Formspree/serverless. -->
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p style="display:none"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-            <div class="grid" style="grid-template-columns:1fr 1fr; gap:12px">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="email" name="email" placeholder="Email address" required>
-            </div>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Your message..." required></textarea>
-            <button class="btn primary" type="submit">Send message</button>
-          </form>
-        </article>
-        <article class="card reveal">
-          <h3 class="h">Contact Info</h3>
-          <p>Email: <a href="mailto:amfavoured001@gmail.com" style="color:#fff">amfavoured001@gmail.com</a></p>
-          <p>Phone/WhatsApp: <a href="tel:+2349125771590" style="color:#fff">09125771590</a></p>
-          <p>Location: Nigeria • Remote-friendly</p>
-          <div class="stack" style="margin-top:8px">
-            <a class="btn" href="https://x.com/KingsleChijioke?t=YqbLBjO0uQZ_jMKTIkhrFg&s=09" aria-label="Twitter">Twitter/X</a>
-            <a class="btn" href="https://www.reddit.com/u/amfavoured05/s/HZ95Vx6nHC" aria-label="Reddit">Reddit</a>
-          </div>
-        </article>
+      <div class="container split">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p>Email: <a class="link" href="mailto:amfavoured001@gmail.com">amfavoured001@gmail.com</a></p>
+          <p>Phone: <a class="link" href="tel:+2349125771590">09125771590</a></p>
+          <p>Location: Nigeria (Remote-friendly)</p>
+          <p>Social: <a class="link" href="https://x.com/KingsleChijioke?t=YqbLBjO0uQZ_jMKTIkhrFg&s=09" target="_blank" rel="noopener">Twitter/X</a> • <a class="link" href="https://www.reddit.com/u/amfavoured05/s/HZ95Vx6nHC" target="_blank" rel="noopener">Reddit</a></p>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          <input name="name" type="text" placeholder="Your name" required>
+          <input name="email" type="email" placeholder="Your email" required>
+          <input name="subject" type="text" placeholder="Subject">
+          <textarea name="message" placeholder="Message..." required></textarea>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <div class="wrap foot">
-      <span>© <span id="year"></span> Amfavoured — Creating Excellence • Glowing Impact.</span>
-      <div class="socials">
-        <a href="#home">Back to top ↑</a>
-      </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="muted">© <span id="year">2025</span> Amfavoured — Creating Excellence • Glowing Impact.</div>
+      <a class="back-top" href="#home">Back to top ↑</a>
     </div>
   </footer>
-
-  <script>
-    // Dynamic year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Reveal on scroll
-    const revealables = document.querySelectorAll('.reveal');
-    const revIO = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); revIO.unobserve(e.target); } })
-    }, {threshold:.12});
-    revealables.forEach(el=>revIO.observe(el));
-
-    // Scroll spy
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('nav a');
-    const spy = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          navLinks.forEach(a=>a.classList.remove('active'));
-          const id = entry.target.getAttribute('id');
-          const active = document.querySelector(`nav a[href="#${id}"]`);
-          if(active){ active.classList.add('active'); }
-        }
-      });
-    }, {rootMargin:'-40% 0px -55% 0px', threshold:[0,1]});
-    sections.forEach(s=>spy.observe(s));
-
-    // Shrink header on scroll (logo remains same size)
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', ()=>{
-      if(window.scrollY > 50) header.classList.add('shrink');
-      else header.classList.remove('shrink');
-    });
-  </script>
 </body>
 </html>
