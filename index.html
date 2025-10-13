@@ -4,18 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Amfavoured — Onwusoro Kingsley Chijioke • Creative Designer</title>
-  <meta name="description" content="Onwusoro Kingsley Chijioke (Amfavoured) — Creative Designer. Graphic design, video editing, web design. Creating Excellence — Glowing Impact." />
+  <meta name="description" content="Onwusoro Kingsley Chijioke (Amfavoured) — Creative design, video editing, web design. Creating Excellence — Glowing Impact." />
 
-  <!-- Minimal CSP (update if you add CDNs) -->
+  <!-- CSP (adjust if you add external resources) -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    script-src 'self' https://unpkg.com;
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src https://fonts.gstatic.com;
     img-src 'self' data:;
-    connect-src 'self';
-    frame-src 'none';
-    object-src 'none';
+    script-src 'self';
   ">
 
   <!-- Fonts -->
@@ -24,22 +21,19 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Defer main script -->
+  <!-- Main JS (deferred) -->
   <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- background orbs -->
-  <div class="bg-orbs" aria-hidden="true"></div>
-
   <!-- Header -->
-  <header id="header" class="site-header">
+  <header class="site-header" id="header" role="banner">
     <div class="container header-row">
-      <a class="brand" href="#home" aria-label="Amfavoured home">
+      <a href="#home" class="brand" aria-label="Amfavoured home">
         <img src="assets/logo.png" alt="Amfavoured logo" class="brand-logo" />
-        <span class="brand-text">Amfavoured</span>
+        <span class="brand-name">Amfavoured</span>
       </a>
 
-      <nav class="main-nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary navigation">
         <a class="nav-link" href="#home">Home</a>
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#skills">Skills</a>
@@ -49,48 +43,35 @@
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-ghost" href="#contact">Work with me</a>
+        <a class="btn btn-primary" href="#contact">Work with me</a>
       </div>
     </div>
   </header>
 
   <!-- Main -->
   <main id="home" class="site-main">
-
-    <!-- HERO (Cryfi-style large headline + right visual) -->
-    <section id="home-hero" class="hero" role="region" aria-label="Intro">
+    <!-- HERO (left text, right visual) -->
+    <section id="home-hero" class="hero section" role="region" aria-label="Intro">
       <div class="container hero-grid">
         <div class="hero-left">
-          <h1 class="hero-title">Signal your creativity — <span>Design that converts</span></h1>
-          <p class="hero-sub">I’m <strong>Onwusoro Kingsley Chijioke</strong> (Amfavoured). Creative designer focused on graphic design, video editing, and web design — building visuals & experiences that create impact.</p>
+          <h1 class="hero-title">Design that communicates • Visuals that convert</h1>
+          <p class="hero-sub">I’m <strong>Onwusoro Kingsley Chijioke</strong> (Amfavoured). Creative designer — graphic design, video editing, and web design. I build striking visuals and effective web experiences.</p>
 
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#services">Explore Services</a>
             <a class="btn btn-outline" href="#projects">See projects</a>
           </div>
 
-          <ul class="hero-benefits">
+          <ul class="hero-features">
             <li>Graphic design • Video editing • Web design</li>
-            <li>Fast turnaround • Remote-friendly (Nigeria)</li>
+            <li>Fast delivery • Remote-friendly (Nigeria)</li>
             <li>Creating Excellence — Glowing Impact</li>
           </ul>
         </div>
 
         <div class="hero-right" aria-hidden="true">
-          <!-- stylized interface mockup (SVG, lightweight) -->
-          <svg class="hero-mock" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img">
-            <defs>
-              <linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
-              <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <rect x="8" y="8" rx="20" width="624" height="464" fill="#071020" stroke="rgba(255,255,255,0.03)"/>
-            <rect x="36" y="36" rx="10" width="320" height="160" fill="url(#lg)" opacity="0.08" />
-            <rect x="36" y="210" rx="8" width="560" height="18" fill="#0b1220"/>
-            <g transform="translate(36,36)" filter="url(#glow)">
-              <circle cx="480" cy="100" r="56" fill="#061834" />
-              <path d="M430 60 C460 20,520 20,548 58" stroke="#06b6d4" stroke-width="3" fill="none" stroke-linecap="round"/>
-            </g>
-          </svg>
+          <!-- Replace with your hero image / Lottie if desired -->
+          <img src="assets/hero.png" alt="Hero visual" class="hero-image" />
         </div>
       </div>
     </section>
@@ -98,16 +79,15 @@
     <!-- ABOUT -->
     <section id="about" class="section" aria-label="About">
       <div class="container split">
-        <div>
-          <h2 class="section-title">About</h2>
-          <p>I’m <strong>Amfavoured</strong> — a creative designer who values clarity, impact and performance. I create brand visuals, edit engaging videos, and design websites that convert users into customers.</p>
-          <p class="muted">Principles: User-first design • Reliability • Measurable outcomes</p>
+        <div class="about-text">
+          <h2>About</h2>
+          <p><strong>Onwusoro Kingsley Chijioke (Amfavoured)</strong> — I create bold, value-focused visuals, edit engaging videos, and design performant websites. I believe in clear design that drives outcomes.</p>
+          <p class="muted">Motto: Creating Excellence — Glowing Impact.</p>
         </div>
-
         <div class="about-stats">
-          <div class="stat"><strong>5+</strong><span>Years experience</span></div>
-          <div class="stat"><strong>Graphic</strong><span>Design • Branding</span></div>
-          <div class="stat"><strong>Video</strong><span>Editing • Motion</span></div>
+          <div class="stat"><strong>Services</strong><span>Graphics, Video, Web</span></div>
+          <div class="stat"><strong>Contact</strong><span><a href="mailto:amfavoured001@gmail.com">amfavoured001@gmail.com</a></span></div>
+          <div class="stat"><strong>Location</strong><span>Nigeria — Remote-friendly</span></div>
         </div>
       </div>
     </section>
@@ -115,24 +95,21 @@
     <!-- SKILLS -->
     <section id="skills" class="section alt" aria-label="Skills">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="cards grid-3">
-          <article class="card reveal">
-            <div class="card-visual icon-graphic" aria-hidden="true"></div>
+        <h2>Skills</h2>
+        <div class="cards">
+          <article class="card">
             <h3>Graphic Design</h3>
-            <p>Logos, brand kits, social visuals — vibrant & clear.</p>
+            <p>Logos, brand kits, social visuals, style guides.</p>
           </article>
 
-          <article class="card reveal">
-            <div class="card-visual icon-video" aria-hidden="true"></div>
+          <article class="card">
             <h3>Video Editing</h3>
-            <p>Social videos, promos, color grade, and motion polish.</p>
+            <p>Shorts, promos, storytelling edits and color grade.</p>
           </article>
 
-          <article class="card reveal">
-            <div class="card-visual icon-web" aria-hidden="true"></div>
+          <article class="card">
             <h3>Web Design</h3>
-            <p>Responsive landing pages and portfolio sites with conversion focus.</p>
+            <p>Responsive sites, landing pages, and performance-focused builds.</p>
           </article>
         </div>
       </div>
@@ -141,49 +118,48 @@
     <!-- SERVICES -->
     <section id="services" class="section" aria-label="Services">
       <div class="container">
-        <h2 class="section-title">Services</h2>
+        <h2>Services</h2>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service">
             <h4>Website Graphics</h4>
-            <p>Hero imagery, illustrations, and on-brand components for your site.</p>
-            <a class="link-cta" href="#contact">Get a quote →</a>
+            <p>Hero visuals, icons, illustrations tuned for conversion.</p>
           </div>
 
-          <div class="service-card">
+          <div class="service">
             <h4>Video & Photo Editing</h4>
-            <p>Shorts, promos, and polished photo edits tailored to your audience.</p>
-            <a class="link-cta" href="#contact">Start edit →</a>
+            <p>Polished edits for social and web — promos, reels, color, sound.</p>
           </div>
 
-          <div class="service-card">
+          <div class="service">
             <h4>Web Design</h4>
-            <p>Landing pages, portfolio sites, and performance-minded builds.</p>
-            <a class="link-cta" href="#contact">Design my site →</a>
+            <p>Landing pages, portfolios, and performance-first sites.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS (placeholder grid like Cryfi's showcases) -->
+    <!-- PROJECTS -->
     <section id="projects" class="section alt" aria-label="Projects">
       <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
+        <h2>Selected Projects</h2>
         <div class="projects-grid">
-          <div class="project-card reveal">
-            <div class="thumb"></div>
+          <article class="project">
+            <img src="assets/project-1.png" alt="Project 1" />
             <h4>Vibrant SaaS Landing</h4>
-            <p class="muted">Bold hero & motion for conversion-focused page.</p>
-          </div>
-          <div class="project-card reveal">
-            <div class="thumb"></div>
+            <p class="muted">Hero & motion for conversion-focused product.</p>
+          </article>
+
+          <article class="project">
+            <img src="assets/project-2.png" alt="Project 2" />
             <h4>Brand System</h4>
-            <p class="muted">Modular brand assets & guidelines.</p>
-          </div>
-          <div class="project-card reveal">
-            <div class="thumb"></div>
-            <h4>Education Portal</h4>
-            <p class="muted">Accessible design for learning platforms.</p>
-          </div>
+            <p class="muted">Modular assets & guidelines for consistent identity.</p>
+          </article>
+
+          <article class="project">
+            <img src="assets/project-3.png" alt="Project 3" />
+            <h4>Education Hub</h4>
+            <p class="muted">Accessible portal for resources and learning.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -192,24 +168,21 @@
     <section id="contact" class="section" aria-label="Contact">
       <div class="container split">
         <div>
-          <h2 class="section-title">Contact</h2>
-          <p>Email: <a class="link" href="mailto:amfavoured001@gmail.com">amfavoured001@gmail.com</a></p>
-          <p>Phone: <a class="link" href="tel:+2349125771590">09125771590</a></p>
-          <p>Location: Nigeria (Remote-friendly)</p>
-          <p>Social: <a class="link" href="https://x.com/KingsleChijioke?t=YqbLBjO0uQZ_jMKTIkhrFg&s=09" target="_blank" rel="noopener">Twitter/X</a> • <a class="link" href="https://www.reddit.com/u/amfavoured05/s/HZ95Vx6nHC" target="_blank" rel="noopener">Reddit</a></p>
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:amfavoured001@gmail.com">amfavoured001@gmail.com</a></p>
+          <p>Phone: <a href="tel:+2349125771590">09125771590</a></p>
+          <p>Social: <a href="https://x.com/KingsleChijioke?t=YqbLBjO0uQZ_jMKTIkhrFg&s=09" target="_blank" rel="noopener">Twitter/X</a> • <a href="https://www.reddit.com/u/amfavoured05/s/HZ95Vx6nHC" target="_blank" rel="noopener">Reddit</a></p>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
-          <input type="hidden" name="form-name" value="contact">
-          <input name="name" type="text" placeholder="Your name" required>
-          <input name="email" type="email" placeholder="Your email" required>
-          <input name="subject" type="text" placeholder="Subject">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form" aria-label="Contact form">
+          <input type="hidden" name="form-name" value="contact" />
+          <input name="name" type="text" placeholder="Your name" required />
+          <input name="email" type="email" placeholder="Your email" required />
           <textarea name="message" placeholder="Message..." required></textarea>
           <button class="btn btn-primary" type="submit">Send message</button>
         </form>
       </div>
     </section>
-
   </main>
 
   <!-- Footer -->
